@@ -231,14 +231,14 @@ export default function LandingPage() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                SKIN
+                BURN
               </motion.span>
               <motion.span
                 className="block bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 bg-clip-text text-transparent -mt-4"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                STORIES
+                SLOW STUDIOS
               </motion.span>
             </motion.h1>
 
@@ -253,7 +253,7 @@ export default function LandingPage() {
               variants={fadeInUp}
               className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
             >
-              Where art meets flesh. Premium tattoo artistry in the heart of the city.
+              Professional Tattoos & Works of Art
               <motion.span className="block mt-4 text-red-400" whileHover={{ color: "#f97316" }}>
                 Your vision, our masterpiece.
               </motion.span>
@@ -387,9 +387,12 @@ export default function LandingPage() {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {[
-              { id: 1, image: "/tattoo.png", title: "Angel", artist: "Sarah Chen" },
-              { id: 2, image: "/tattoo-2.png", title: "Ribs", artist: "Mike Torres" },
-              { id: 3, image: "/tattoo-3.png", title: "Wings", artist: "Alex Rivera" },
+              { id: 1, image: "/burn-slow-1.jpg", title: "Traditional", artist: "Burn Slow Studios" },
+              { id: 2, image: "/burn-slow-2.jpg", title: "Japanese", artist: "Burn Slow Studios" },
+              { id: 3, image: "/burn-slow-3.jpg", title: "Black & Grey", artist: "Burn Slow Studios" },
+              { id: 4, image: "/burn-slow-4.jpg", title: "Neo Traditional", artist: "Burn Slow Studios" },
+              { id: 5, image: "/burn-slow-5.jpg", title: "Color Work", artist: "Burn Slow Studios" },
+              { id: 6, image: "/burn-slow-6.jpg", title: "Custom Design", artist: "Burn Slow Studios" },
             ].map((item) => (
               <motion.div
                 key={item.id}
@@ -410,15 +413,7 @@ export default function LandingPage() {
                     whileHover={{ opacity: 1 }}
                     className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"
                   />
-                  <motion.div
-                    initial={{ y: 20, opacity: 0 }}
-                    whileHover={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                    className="absolute bottom-6 left-6 right-6"
-                  >
-                    <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
-                    <p className="text-red-400 text-sm font-medium">By {item.artist}</p>
-                  </motion.div>
+
                 </div>
               </motion.div>
             ))}
@@ -564,7 +559,7 @@ export default function LandingPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl md:text-7xl font-black mb-12">
+              <h2 className="text-5xl md:text-7xl font-black mb-12 font-gothic">
                 <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">Visit</span>
                 <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
                   {" "}
@@ -580,9 +575,9 @@ export default function LandingPage() {
                 className="space-y-8"
               >
                 {[
-                  { icon: MapPin, text: "123 Art Street, Creative District, City 12345" },
+                  { icon: MapPin, text: "24 E. King St., Littlestown, Pennsylvania 17340" },
                   { icon: Clock, text: "Mon-Sat: 10AM-8PM | Sun: 12PM-6PM" },
-                  { icon: Phone, text: "(555) 123-TATTOO" },
+                  { icon: Phone, text: "443-744-2441" },
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -636,8 +631,8 @@ export default function LandingPage() {
                 className="aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-zinc-700/50"
               >
                 <Image
-                  src="/interior.png"
-                  alt="Studio Interior"
+                  src="/studio.jpg"
+                  alt="Burn Slow Studios Artwork"
                   width={600}
                   height={600}
                   className="w-full h-full object-cover"
@@ -682,18 +677,24 @@ export default function LandingPage() {
                 whileHover={{ scale: 1.05 }}
                 className="text-4xl font-bold bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent mb-6 font-gothic"
               >
-                SkinStories
+                Burn Slow Studios
               </motion.div>
               <p className="text-gray-400 mb-8 max-w-md text-lg leading-relaxed">
                 Premium tattoo artistry where your vision becomes reality. Creating lasting memories, one tattoo at a
                 time.
               </p>
               <div className="flex space-x-6">
-                {[Instagram, Facebook, Twitter].map((Icon, index) => (
-                  <motion.div key={index} whileHover={{ scale: 1.2, y: -5 }} whileTap={{ scale: 0.9 }}>
-                    <Icon className="w-8 h-8 text-gray-400 hover:text-red-500 cursor-pointer transition-colors duration-300" />
+                <Link href="https://www.instagram.com/burn.slow.studios/?hl=en" target="_blank" rel="noopener noreferrer">
+                  <motion.div whileHover={{ scale: 1.2, y: -5 }} whileTap={{ scale: 0.9 }}>
+                    <Instagram className="w-8 h-8 text-gray-400 hover:text-red-500 cursor-pointer transition-colors duration-300" />
                   </motion.div>
-                ))}
+                </Link>
+                <motion.div whileHover={{ scale: 1.2, y: -5 }} whileTap={{ scale: 0.9 }}>
+                  <Facebook className="w-8 h-8 text-gray-400 hover:text-red-500 cursor-pointer transition-colors duration-300" />
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.2, y: -5 }} whileTap={{ scale: 0.9 }}>
+                  <Twitter className="w-8 h-8 text-gray-400 hover:text-red-500 cursor-pointer transition-colors duration-300" />
+                </motion.div>
               </div>
             </motion.div>
 
@@ -727,7 +728,7 @@ export default function LandingPage() {
             viewport={{ once: true }}
             className="border-t border-zinc-800 mt-16 pt-8 text-center text-gray-500"
           >
-            <p className="text-lg">&copy; {new Date().getFullYear()} SKINSTORIES. All rights reserved.</p>
+            <p className="text-lg">&copy; {new Date().getFullYear()} Burn Slow Studios. All rights reserved.</p>
           </motion.div>
         </div>
       </motion.footer>
