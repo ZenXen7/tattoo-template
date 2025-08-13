@@ -24,7 +24,7 @@ export default function LandingPage() {
     offset: ["start start", "end start"],
   })
 
-  const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
+  const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
     setIsMenuOpen(false)
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" })
