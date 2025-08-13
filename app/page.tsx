@@ -701,7 +701,7 @@ export default function LandingPage() {
             <motion.div variants={fadeInUp}>
               <h3 className="text-white font-semibold mb-6 text-xl">Quick Links</h3>
               <ul className="space-y-4 text-gray-400">
-                {["Portfolio", "Services", "Aftercare"].map((item, index) => (
+                {["Portfolio", "Services", "Aftercare"].map((item) => (
                   <motion.li key={item} whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
                     <Link href="#" className="hover:text-red-400 transition-colors duration-300 text-lg">
                       {item}
